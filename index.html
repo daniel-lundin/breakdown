@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body class="flex-center">
+  <div id="container">
+    <div id="card1" class="card abs-fill flex-center to-the-left"></div>
+    <div id="card2" class="card abs-fill flex-center"></div>
+    <div id="card3" class="card abs-fill flex-center to-the-right"></div>
+    <img src="frame.png" id="frame">
+  </div>
+  <div class="button-bar">
+    <button>First</button>
+    <button>Second</button>
+    <button>Third</button>
+  </div>
+  <script>
+    function setLeft(e) {
+      e.classList.remove('to-the-right');
+      e.classList.add('to-the-left');
+    }
+    function setRight(e) {
+      e.classList.add('to-the-right');
+      e.classList.remove('to-the-left');
+    }
+    function setCenter(e) {
+      e.classList.remove('to-the-right');
+      e.classList.remove('to-the-left');
+    }
+    const bar = document.querySelector('.button-bar');
+    bar.addEventListener('click', function(e) {
+      console.log('e', e);
+      switch(e.target.textContent) {
+        case 'First':
+          setCenter(card1);
+          setRight(card2);
+          setRight(card3);
+          break;
+        case 'Second':
+          setLeft(card1);
+          setCenter(card2);
+          setRight(card3);
+          break;
+        case 'Third':
+          setLeft(card1);
+          setLeft(card2);
+          setCenter(card3);
+          break;
+      }
+    });
+  </script>
+  </body>
+</html>
