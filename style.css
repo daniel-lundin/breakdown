@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Sharp-Grotesk-Medium';
+    font-weight: 400;
+    src: url('SharpGroteskMedium25.woff2') format('woff2'),
+    url('SharpGroteskBookMedium25.woff') format('woff');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.abs-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#container {
+  position: relative;
+  width: 300px;
+  height: 533.333px;
+  perspective: 800px;
+}
+
+#frame {
+  position: relative;
+  width: 110%;
+  left: -5%;
+  top: -11%;
+}
+
+#frame-bottom {
+  width: calc(100% + 4px);;
+  height: 48px;
+  background-color: black;
+  position: absolute;
+  bottom: -48px;
+  left: -2px;
+}
+
+.card {
+  background-color: gray;
+  transition: transform 1s;
+}
+#card1, #card3 {
+  background-color: hotpink;
+}
+
+.to-the-right {
+  transform:  translate(150px) rotateY(45deg) translate(-150px) translate(300px);
+}
+
+.to-the-left {
+  transform:  translate(-150px) rotateY(-45deg) translate(150px) translate(-300px);
+}
+
+.button-bar {
+  display: flex;
+}
+button {
+  font-family: Sharp-Grotesk-Medium;
+  cursor: pointer;
+  color: white;
+  height: 48px;
+  border-radius: 48px;
+  line-height: 48px;
+  text-align: center;
+  font-size: 14px;
+  width: 140px;
+  margin: 0 40px;
+  border: none;
+  background-color: #212429;
+}  
+
