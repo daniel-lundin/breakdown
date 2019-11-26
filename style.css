@@ -15,8 +15,6 @@ html, body {
   height: 100%;
 }
 
-
-
 .flex-center {
   display: flex;
   align-items: center;
@@ -34,8 +32,8 @@ html, body {
 
 #container {
   position: relative;
-  width: 300px;
-  height: 533.333px;
+  width: 200px;
+  height: calc(200px * 16/9);
   perspective: 800px;
 }
 
@@ -46,29 +44,24 @@ html, body {
   top: -11%;
 }
 
-#frame-bottom {
-  width: calc(100% + 4px);;
-  height: 48px;
-  background-color: black;
-  position: absolute;
-  bottom: -48px;
-  left: -2px;
-}
-
 .card {
   background-color: gray;
-  transition: transform 1s;
+  transition: all 1s;
+  font-family: Sharp-Grotesk-Medium;
+  font-size: 24px;
+  opacity: 0.8;
 }
 #card1, #card3 {
-  background-color: hotpink;
 }
 
 .to-the-right {
-  transform:  translate(150px) rotateY(45deg) translate(-150px) translate(300px);
+  transform:  translate(100px) rotateY(45deg) translate(-100px) translate(200px);
+  background-color: hotpink;
 }
 
 .to-the-left {
-  transform:  translate(-150px) rotateY(-45deg) translate(150px) translate(-300px);
+  transform:  translate(-100px) rotateY(-45deg) translate(100px) translate(-200px);
+  background-color: hotpink;
 }
 
 .button-bar {
